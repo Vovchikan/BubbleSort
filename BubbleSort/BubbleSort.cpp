@@ -41,7 +41,7 @@ int GetArrayLengthFromConsole() {
 
 int* GenerateMassive(int length) {
     int* massive = new int[length];
-    for (int i = 0; i < length - 1; i++)
+    for (int i = 0; i < length; i++)
     {
         massive[i] = rand() % (MAX - MIN + 1) + MIN;
     }
@@ -50,7 +50,7 @@ int* GenerateMassive(int length) {
 
 int PrintMassive(int* massive, int length) {
     cout << endl << "Massive: ";
-    for (int i = 0; i < length - 1; i++)
+    for (int i = 0; i < length; i++)
     {
         cout << "[" << massive[i] << "] ";
     }
@@ -64,7 +64,7 @@ int BubbleSort(int* massive, int length) {
     bool notSorted = true;
     while (notSorted) {
         notSorted = false;
-        for (int i = 0, j = 1; i < length - 2; i++, j++)
+        for (int i = 0, j = 1; i < length - 1; i++, j++)
         {
             if (massive[i] > massive[j]) {
                 Swap(massive, i, j);
